@@ -107,6 +107,8 @@
     <Content Include="app\app.component.css" />
     <Content Include="app\assets\images\logo.jpg" />
     <Content Include="app\home\welcome.component.html" />
+    <Content Include="app\products\product-detail.component.html" />
+    <Content Include="app\products\product-list.component.html" />
     <Content Include="app\shared\star.component.css" />
     <Content Include="app\shared\star.component.html" />
     <Content Include="Global.asax" />
@@ -146,6 +148,7 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\home\welcome.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\products\product-list.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
