@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(['angular2/router', "angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,27 +10,37 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var ProductDetail;
+    var router_1, core_1;
+    var ProductDetailComponent;
     return {
         setters:[
+            function (router_1_1) {
+                router_1 = router_1_1;
+            },
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ProductDetail = (function () {
-                function ProductDetail() {
+            ProductDetailComponent = (function () {
+                function ProductDetailComponent(_routeParams, _router) {
+                    this._routeParams = _routeParams;
+                    this._router = _router;
                     this.pageTitle = "Product Details";
+                    var id = +this._routeParams.get('id');
+                    this.pageTitle += " :" + id;
                 }
-                ProductDetail = __decorate([
+                ProductDetailComponent.prototype.onBack = function () {
+                    this._router.navigate(['Products']);
+                };
+                ProductDetailComponent = __decorate([
                     core_1.Component({
-                        templateUrl: "app/products/product-detail.component"
+                        templateUrl: "app/products/product-detail.component.html"
                     }), 
-                    __metadata('design:paramtypes', [])
-                ], ProductDetail);
-                return ProductDetail;
+                    __metadata('design:paramtypes', [router_1.RouteParams, router_1.Router])
+                ], ProductDetailComponent);
+                return ProductDetailComponent;
             }());
-            exports_1("ProductDetail", ProductDetail);
+            exports_1("ProductDetailComponent", ProductDetailComponent);
         }
     }
 });

@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
-    <base href="/"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/" />
     <title>Acme Product Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
-    <link href="app/app.component.css" rel="stylesheet"/>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
 
     <!-- 1. Load libraries -->
     <!-- IE required polyfills, in this exact order -->
@@ -36,9 +37,9 @@
         System.import('app/main').then(null, console.error.bind(console));
     </script>
 </head>
-
 <body>
-    <pm-app>Loading app....</pm-app>
-</body>
 
+        @RenderBody()
+
+</body>
 </html>
